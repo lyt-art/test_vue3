@@ -26,17 +26,28 @@
     </div>
     <div class="box moment">
       <div class="title">moment</div>
-      <div class="text" @click="getTime(1)">
+      <div @click="getTime(1)" class="text">
         点击获取当前时间(YYYY-MM-DD)：<span>{{ moment_res }}</span>
       </div>
-      <div class="text" @click="getTime(2)">
+      <div @click="getTime(2)" class="text">
         点击获取一个月前时间(YYYY-MM-DD)：<span>{{ moment_res1 }}</span>
       </div>
-      <div class="text" @click="getTime(3)">
+      <div @click="getTime(3)" class="text">
         点击获取一年后当前时间(YYYY-MM-DD)：<span>{{ moment_res2 }}</span>
       </div>
     </div>
-    <div class="box"></div>
+    <div class="box filters">
+      <div class="title">filters</div>
+      <div class="text">
+        10000过滤 ==><span>{{ 10000 | numberFormatter }}</span>
+      </div>
+      <div class="text">
+        1823过滤 ==><span>{{ 1823 | strToNumFormat }}</span>
+      </div>
+      <div class="text">
+        1823.95过滤 ==><span>{{ 1823.95 | numFormat }}</span>
+      </div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -56,7 +67,8 @@ export default {
       qsParse_res: null,
       moment_res: null,
       moment_res1: null,
-      moment_res2: null
+      moment_res2: null,
+      filter_res: null
     };
   },
   methods: {

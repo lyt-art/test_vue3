@@ -29,6 +29,10 @@ import moment from "moment";
 Vue.prototype.$moment = moment;
 
 // 自定义全局过滤器 使用{{变量 | 过滤器名称}}
+import * as filters from "./filters/index";
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key]);
+});
 
 Vue.config.productionTip = false;
 
