@@ -20,6 +20,14 @@ Vue.use(jsonp);
 import echarts from "echarts";
 Vue.prototype.$echarts = echarts;
 
+// 全局注册qs(解析url) 使用this.$qs.
+import qs from "qs";
+Vue.prototype.$qs = qs;
+
+// 全局注册时间格式化 使用this.$moment().format
+import moment from "moment";
+Vue.prototype.$moment = moment;
+
 // 自定义全局过滤器 使用{{变量 | 过滤器名称}}
 
 Vue.config.productionTip = false;

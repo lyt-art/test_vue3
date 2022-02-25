@@ -7,8 +7,35 @@
       <el-button @click="sendJsp()" type="primary">jsp发送</el-button>
       <div class="content">{{ jsp_res }}</div>
     </div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="box qs">
+      <div class="title">qs(解析url)</div>
+      <div class="one">
+        <div class="input">admin=cap&pws=123456</div>
+        <el-button @click="changeToObj()" class="button" type="primary"
+          >转换</el-button
+        >
+        <div class="content">{{ qsStringfy_res }}</div>
+      </div>
+      <div class="two">
+        <div class="input">{admin:"cap",pws:"123456"}</div>
+        <el-button @click="changeToStr()" class="button" type="primary"
+          >转换</el-button
+        >
+        <div class="content">{{ qsParse_res }}</div>
+      </div>
+    </div>
+    <div class="box moment">
+      <div class="title">moment</div>
+      <div class="text" @click="getTime(1)">
+        点击获取当前时间(YYYY-MM-DD)：<span>{{ moment_res }}</span>
+      </div>
+      <div class="text" @click="getTime(2)">
+        点击获取一个月前时间(YYYY-MM-DD)：<span>{{ moment_res1 }}</span>
+      </div>
+      <div class="text" @click="getTime(3)">
+        点击获取一年后当前时间(YYYY-MM-DD)：<span>{{ moment_res2 }}</span>
+      </div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -24,11 +51,17 @@ export default {
   data() {
     return {
       jsonp_res: null,
-      jsp_res: null
+      jsp_res: null,
+      qsStringfy_res: null,
+      qsParse_res: null,
+      moment_res: null,
+      moment_res1: null,
+      moment_res2: null
     };
   },
   methods: {
-    // 启动db.json 命令行: json-server --watch db.json
+    // 需要启动db.json 命令行: json-server --watch db.json
+    // jsonp使用
     sendJsonp() {
       this.$jsonp("http://localhost:3000/getMenuList")
         .then(res => {
@@ -50,6 +83,33 @@ export default {
         .catch(err => {
           console.log(err);
         });
+    },
+    // qs使用
+    changeToObj() {
+      let str = "admin=cap&pws=123456";
+      this.qsStringfy_res = this.$qs.parse(str);
+    },
+    changeToStr() {
+      let obj = { admin: "cap", pws: "123456" };
+      this.qsParse_res = this.$qs.stringify(obj);
+    },
+    // moment使用
+    getTime(params) {
+      switch (params) {
+        case 1:
+          this.moment_res = this.$moment().format("YYYY-MM-DD");
+          break;
+        case 2:
+          this.moment_res1 = this.$moment()
+            .subtract(1, "months")
+            .format("YYYY-MM-DD");
+          break;
+        case 3:
+          this.moment_res2 = this.$moment()
+            .add(1, "years")
+            .format("YYYY-MM-DD");
+          break;
+      }
     }
   }
 };
@@ -81,8 +141,59 @@ export default {
 
   .jsonp {
     .content {
-      width: 100%;
+      width: 95%;
       height: 80px;
+      border: 1px solid #2f3033;
+      margin: 1%;
+    }
+  }
+
+  .qs {
+    .one,
+    .two {
+      position: relative;
+      width: 100%;
+      height: 40%;
+      .input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px solid gray;
+        margin: 1%;
+      }
+      .button {
+        position: absolute;
+        right: 9px;
+        top: 4px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        padding: 0;
+      }
+      .content {
+        position: absolute;
+        left: 0px;
+        top: 35px;
+        width: 90%;
+        height: 80px;
+        border: 1px solid gray;
+        margin: 1%;
+      }
+    }
+  }
+
+  .moment {
+    .text {
+      width: 95%;
+      height: 80px;
+      border: 1px solid gray;
+      margin: 1%;
+      cursor: pointer;
     }
   }
 }
