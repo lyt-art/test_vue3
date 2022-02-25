@@ -8,4 +8,13 @@
 export default {};
 </script>
 
-<style lang="less" scoped></style>
+<style lang="less">
+* {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+</style>

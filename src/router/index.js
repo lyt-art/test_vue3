@@ -6,14 +6,25 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
+    path: "/", //默认路由
+    redirect: "/home"
+  },
+  {
+    path: "/home",
     name: "Home",
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: "/test",
+        name: "Test",
+        component: () => import("../views/test/Test")
+      }
+    ]
   },
   {
     path: "/csjcys",
     name: "Csjcys",
-    component: () => import("../views/augur/szg/csjcys")
+    component: () => import("../views/augur/szg/Csjcys")
   }
 ];
 

@@ -439,7 +439,7 @@ export default {
           value: 30
         }
       ]; // 类别
-      // var sum = 0;
+      var sum = 0;
       category.forEach(ele => {
         sum += ele.value;
       });

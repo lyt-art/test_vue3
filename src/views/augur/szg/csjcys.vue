@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import CsjcysL from "./csjcys/csjcysL.vue";
-import CsjcysR from "./csjcys/csjcysR.vue";
+import CsjcysL from "./csjcys/CsjcysL.vue";
+import CsjcysR from "./csjcys/CsjcysR.vue";
 export default {
   data() {
     return {
