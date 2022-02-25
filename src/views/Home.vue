@@ -9,6 +9,9 @@
             class="el-menu-vertical-demo"
             @open="handleOpen"
             @close="handleClose"
+            background-color="#2f3033"
+            text-color="#fff"
+            active-text-color="#ffd04b"
           >
             <el-submenu
               :index="index"
@@ -117,7 +120,9 @@ export default {
     left: 0;
     width: 100%;
     height: 50px;
-    background-color: pink;
+    line-height: 50px;
+    text-align: center;
+    background-color: rgba(4, 31, 82, 0.712);
   }
 
   .navMenu {
@@ -126,6 +131,7 @@ export default {
     left: 0;
     width: 20%;
     height: 800px;
+    background-color: #2f3033;
 
     .tac {
       width: 100%;
@@ -142,9 +148,8 @@ export default {
     position: absolute;
     top: 50px;
     left: 20%;
-    width: 100%;
+    width: 80%;
     height: 800px;
-    border: 1px solid #000;
   }
 }
 </style>
