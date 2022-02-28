@@ -61,7 +61,10 @@ export default {
             {
               name: "测试",
               id: "test",
-              child: [{ name: "第三方插件测试", id: "test" }]
+              child: [
+                { name: "第三方插件测试", id: "test" },
+                { name: "vuex使用", id: "vuex-test" }
+              ]
             }
           ]
         },
@@ -122,6 +125,8 @@ export default {
     height: 50px;
     line-height: 50px;
     text-align: center;
+    color: #fff;
+    font-size: 23px;
     background-color: rgba(4, 31, 82, 0.712);
   }
 
