@@ -48,7 +48,10 @@
         1823.95过滤 ==><span>{{ 1823.95 | numFormat }}</span>
       </div>
     </div>
-    <div class="box"></div>
+    <div class="box drag">
+      <div class="title">drag</div>
+      <div class="content" v-drag>请拖拽此盒子</div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -71,6 +74,7 @@ export default {
       filter_res: null
     };
   },
+
   methods: {
     // 需要启动db.json 命令行: json-server --watch db.json
     // jsonp使用
@@ -205,6 +209,19 @@ export default {
       height: 80px;
       border: 1px solid gray;
       margin: 1%;
+      cursor: pointer;
+    }
+  }
+
+  .drag {
+    position: relative;
+    .content {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      background-color: gray;
       cursor: pointer;
     }
   }

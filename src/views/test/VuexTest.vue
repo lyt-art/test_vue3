@@ -59,7 +59,7 @@
 import { mapGetters, mapMutations, mapState } from "vuex";
 export default {
   mounted() {
-    console.log(this.$store);
+    // console.log(this.$store);
   },
   computed: {
     // vuex 辅助函数

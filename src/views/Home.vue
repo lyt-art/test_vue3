@@ -14,7 +14,7 @@
             active-text-color="#ffd04b"
           >
             <el-submenu
-              :index="index"
+              :index="`${index + 1}`"
               v-for="(item, index) in subMenu"
               :key="index"
             >
@@ -23,13 +23,13 @@
                 <span>{{ item.name }}</span>
               </template>
               <el-submenu
-                :index="`1-${index1 + 1}`"
+                :index="`${index + 1}-${index1 + 1}`"
                 v-for="(item1, index1) in item.child"
                 :key="index1"
               >
                 <template slot="title">{{ item1.name }}</template>
                 <el-menu-item
-                  :index="`1-${index1 + 1}-${index2 + 1}`"
+                  :index="`${index + 1}-${index1 + 1}-${index2 + 1}`"
                   v-for="(item2, index2) in item1.child"
                   :key="index2"
                   @click="gotoRoute(item2.id)"
@@ -62,8 +62,9 @@ export default {
               name: "测试",
               id: "test",
               child: [
-                { name: "第三方插件测试", id: "test" },
-                { name: "vuex使用", id: "vuex-test" }
+                { name: "第三方插件测试", id: "plugin-test" },
+                { name: "vuex使用", id: "vuex-test" },
+                { name: "知识点", id: "other-test" }
               ]
             }
           ]
@@ -104,7 +105,7 @@ export default {
     },
     gotoRoute(params) {
       this.routePath = `/${params}`;
-      console.log(this.routePath);
+      // console.log(this.routePath);
       this.$router.push({ path: this.routePath });
     }
   }
