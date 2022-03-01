@@ -52,7 +52,16 @@
       <div class="title">drag</div>
       <div class="content" v-drag>请拖拽此盒子</div>
     </div>
-    <div class="box"></div>
+    <div class="box axios">
+      <div class="title">axios</div>
+      <div class="content">
+        <el-button @click="getMenuList()" class="button" type="primary"
+          >获取菜单</el-button
+        >
+        <div class="text">封装的axios：{{ axios_res }}</div>
+        <div class="text">原装的axios：{{ axs_res }}</div>
+      </div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -61,6 +70,7 @@
 </template>
 
 <script>
+import { getMenuList } from "../../api/apiService";
 export default {
   data() {
     return {
@@ -71,7 +81,9 @@ export default {
       moment_res: null,
       moment_res1: null,
       moment_res2: null,
-      filter_res: null
+      filter_res: null,
+      axios_res: null,
+      axs_res: null
     };
   },
 
@@ -126,6 +138,18 @@ export default {
             .format("YYYY-MM-DD");
           break;
       }
+    },
+    getMenuList() {
+      // 自己封装的axios
+      getMenuList().then(res => {
+        // console.log(res, "res");
+        this.axios_res = res.data;
+      });
+      // 原装axios
+      this.$axs("/axs").then(res => {
+        // console.log(res, "$axs");
+        this.axs_res = res.data;
+      });
     }
   }
 };
@@ -223,6 +247,20 @@ export default {
       text-align: center;
       background-color: gray;
       cursor: pointer;
+    }
+  }
+
+  .axios {
+    .content {
+      .button {
+        margin-bottom: 10px;
+      }
+      .text {
+        width: 95%;
+        height: 80px;
+        border: 1px solid #2f3033;
+        margin: 1%;
+      }
     }
   }
 }

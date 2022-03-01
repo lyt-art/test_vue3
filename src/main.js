@@ -3,6 +3,13 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+import axios from "axios";
+Vue.prototype.$axs = axios;
+import "jquery";
+import $ from "jquery";
+window.jQuery = $;
+window.$ = $;
+
 // 第三插件
 // UI组件
 import elementUI from "element-ui";
