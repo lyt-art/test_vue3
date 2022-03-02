@@ -13,7 +13,12 @@
       <button @click="setOrderType(2)">年龄降序</button>
       <button @click="setOrderType(0)">原本顺序</button>
     </div>
-    <div class="box"></div>
+    <div class="box father-child">
+      <div class="title">父子组件传参</div>
+      <div class="content">
+        <FatherChild></FatherChild>
+      </div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -26,6 +31,7 @@
 </template>
 
 <script>
+import FatherChild from "../../components/father-child/father.vue";
 export default {
   data() {
     return {
@@ -58,6 +64,9 @@ export default {
       }
       return fPersons;
     }
+  },
+  components: {
+    FatherChild
   },
   methods: {
     // sort类名
@@ -98,6 +107,14 @@ export default {
     }
     button {
       margin-right: 10px;
+    }
+  }
+
+  .father-child {
+    .content {
+      width: 90%;
+      height: 238px;
+      margin: 4%;
     }
   }
 }

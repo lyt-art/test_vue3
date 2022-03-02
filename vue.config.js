@@ -1,4 +1,8 @@
 module.exports = {
+  publicPath: "./",
+  outputDir: process.env.outputDir,
+  lintOnSave: false, //是否在保存的时候检查  检查出的错误会触发编译失败。
+  productionSourceMap: false, // 生产环境是否生成 sourceMap 文件 default:true 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建
   devServer: {
     host: "0.0.0.0",
     port: 9019, // 端口号

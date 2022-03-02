@@ -187,8 +187,12 @@ class httpRequest {
         // "x-tif-nonce": nonce
       },
       // 携带认证信息，默认为false，这样在跨域请求下session无法获取信息
+
       withCredentials: true
     };
+    // const token =
+    //   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcHVzTG9naW5Vc2VyIjp7InVzZXIiOnsidXNlcklkIjoiYTJlMzA0NDctNzc5ZC00OTRmLWE3NjQtNjQ4OTRiNmI1MjhlIiwidXNlck5hbWUiOiLotoXnuqfnrqHnkIblkZgiLCJsb2dpbk5hbWUiOiJhZ2NvbWFkbWluIiwibG9naW5Qd2QiOm51bGwsImlzTG9jayI6bnVsbCwibG9naW5GYWlsTnVtIjpudWxsLCJsb2NrVGltZSI6bnVsbCwiaXNBY3RpdmUiOm51bGwsImFjdGl2ZUJlZ2luVGltZSI6bnVsbCwiYWN0aXZlRW5kVGltZSI6bnVsbH0sIm9yZ3MiOm51bGwsImN1cnJlbnRPcmdJZCI6IjAzNjg5NDhhLTFjZGYtNGJmOC1hODI4LTcxZDc5NmJhODlmNiIsImN1cnJlbnRPcmdDb2RlIjoiUjAyOSIsImN1cnJlbnRUbW4iOiIiLCJhcHBTb2Z0Q29udGV4dHMiOltdLCJ0bW5NZW51Q29udGV4dHMiOltdfSwidXNlcl9uYW1lIjoiYWdjb21hZG1pbiIsInNjb3BlIjpbImFsbCJdLCJleHAiOjE5MzYzMzgxMzUsImF1dGhvcml0aWVzIjpbImEyZTMwNDQ3LTc3OWQtNDk0Zi1hNzY0LTY0ODk0YjZiNTI4ZSJdLCJqdGkiOiJmYzg4M2VmOC0xNTZmLTQ3ZjQtYTg2ZC03MTlmMjc5NTExYmYiLCJjbGllbnRfaWQiOiJkZW1vIn0.04zwtNASCPYZHmJb6lE9tk-kBmx8O9b-PLUjoAWAeSg";
+    // conf.headers.Authorization = "Bearer " + token;
     return axios.create(conf);
   }
   async request(baseUrl, options) {

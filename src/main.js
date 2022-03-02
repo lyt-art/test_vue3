@@ -10,6 +10,8 @@ import $ from "jquery";
 window.jQuery = $;
 window.$ = $;
 
+Vue.prototype.$bus = new Vue();
+
 // 第三插件
 // UI组件
 import elementUI from "element-ui";
