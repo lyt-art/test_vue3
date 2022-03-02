@@ -19,7 +19,11 @@
         <FatherChild></FatherChild>
       </div>
     </div>
-    <div class="box"></div>
+    <div class="box mixin">
+      <div class="title">mixin混入</div>
+      <button @click="getMixin()">获取mixin中的值</button><br />
+      <span>{{ mixin_res }}</span>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -32,7 +36,9 @@
 
 <script>
 import FatherChild from "../../components/father-child/father.vue";
+import capMixin from "../../mixins/index";
 export default {
+  mixins: [capMixin],
   data() {
     return {
       orderType: 0, //0原本排序， 1：升序，  2：降序
@@ -43,10 +49,12 @@ export default {
         { name: "Admin", age: 13 },
         { name: "Root", age: 16 },
         { name: "Rose", age: 10 }
-      ]
+      ],
+      mixin_res: ""
     };
   },
   computed: {
+    // 列表过滤与排序
     filterPersons() {
       const { searchName, persons, orderType } = this;
       // 过滤 indexOf检索（-1：没有检索到，0/1/2：检索到返回索引值）
@@ -69,9 +77,13 @@ export default {
     FatherChild
   },
   methods: {
-    // sort类名
+    // 列表过滤与排序
     setOrderType(num) {
       this.orderType = num;
+    },
+    // mixin使用
+    getMixin() {
+      this.mixin_res = this.getMsgMixin();
     }
   }
 };
@@ -115,6 +127,12 @@ export default {
       width: 90%;
       height: 238px;
       margin: 4%;
+    }
+  }
+
+  .mixin {
+    button {
+      margin: 0 0 10px 10px;
     }
   }
 }

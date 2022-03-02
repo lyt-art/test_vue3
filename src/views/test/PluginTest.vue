@@ -139,6 +139,7 @@ export default {
           break;
       }
     },
+    // axios使用
     getMenuList() {
       // 自己封装的axios
       getMenuList().then(res => {
