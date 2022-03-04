@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import { getMenuList } from "../../api/apiService";
+import { getMenuList } from "../../../api/apiService";
 export default {
   data() {
     return {

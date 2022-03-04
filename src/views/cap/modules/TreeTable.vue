@@ -7,7 +7,7 @@
   />
 </template>
 <script>
-import TreeTable from "../../components/tree-table";
+import TreeTable from "../../../components/tree-table";
 export default {
   name: "LoginForm",
   data() {

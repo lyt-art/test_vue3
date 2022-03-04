@@ -11,27 +11,27 @@ const routes = [
       {
         path: "/plugin-test",
         name: "PluginTest",
-        component: () => import("../views/test/PluginTest")
+        component: () => import("../views/cap/test/PluginTest")
       },
       {
         path: "/vuex-test",
         name: "VuexTest",
-        component: () => import("../views/test/VuexTest")
+        component: () => import("../views/cap/test/VuexTest")
       },
       {
         path: "/other-test",
         name: "OtherTest",
-        component: () => import("../views/test/OtherTest")
+        component: () => import("../views/cap/test/OtherTest")
       },
       {
         path: "/tree-table",
         name: "TreeTable",
-        component: () => import("../views/test/TreeTable")
+        component: () => import("../views/cap/modules/TreeTable")
       },
       {
         path: "/web-table",
         name: "WebTable",
-        component: () => import("../views/test/WebTable")
+        component: () => import("../views/cap/modules/WebTable")
       }
     ]
   },

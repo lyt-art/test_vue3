@@ -39,8 +39,8 @@
 </template>
 
 <script>
-import CommonForm from "../../components/web-table/form.vue";
-import CommonTable from "../../components/web-table/table.vue";
+import CommonForm from "../../../components/web-table/form.vue";
+import CommonTable from "../../../components/web-table/table.vue";
 export default {
   components: {
     CommonForm,

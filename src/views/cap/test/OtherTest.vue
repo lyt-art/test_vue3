@@ -35,8 +35,8 @@
 </template>
 
 <script>
-import FatherChild from "../../components/father-child/father.vue";
-import capMixin from "../../mixins/index";
+import FatherChild from "../../../components/father-child/father.vue";
+import capMixin from "../../../mixins/index";
 export default {
   mixins: [capMixin],
   data() {

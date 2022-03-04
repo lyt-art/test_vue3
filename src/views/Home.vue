@@ -72,7 +72,7 @@ export default {
               id: "modules",
               child: [
                 { name: "树形表格", id: "tree-table" },
-                { name: "表格＋表单（博客）", id: "web-table" }
+                { name: "表格＋表单", id: "web-table" }
               ]
             }
           ]
