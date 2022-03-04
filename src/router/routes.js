@@ -22,9 +22,20 @@ const routes = [
         path: "/other-test",
         name: "OtherTest",
         component: () => import("../views/test/OtherTest")
+      },
+      {
+        path: "/tree-table",
+        name: "TreeTable",
+        component: () => import("../views/test/TreeTable")
+      },
+      {
+        path: "/web-table",
+        name: "WebTable",
+        component: () => import("../views/test/WebTable")
       }
     ]
   },
+
   {
     path: "/csjcys",
     name: "Csjcys",

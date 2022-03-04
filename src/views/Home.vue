@@ -66,6 +66,14 @@ export default {
                 { name: "vuex使用", id: "vuex-test" },
                 { name: "知识点", id: "other-test" }
               ]
+            },
+            {
+              name: "功能模块",
+              id: "modules",
+              child: [
+                { name: "树形表格", id: "tree-table" },
+                { name: "表格＋表单（博客）", id: "web-table" }
+              ]
             }
           ]
         },
