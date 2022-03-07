@@ -72,7 +72,9 @@ export default {
               id: "modules",
               child: [
                 { name: "树形表格", id: "tree-table" },
-                { name: "表格＋表单", id: "web-table" }
+                { name: "表格＋表单", id: "web-table" },
+                { name: "广州市地图echarts", id: "gzmap-chart" },
+                { name: "自定义轮播图", id: "custom-swiper" }
               ]
             }
           ]
@@ -86,7 +88,8 @@ export default {
               id: "szg",
               child: [
                 { name: "城市基础要素", id: "csjcys" },
-                { name: "地", id: "land" }
+                { name: "地-轮播图", id: "land-sect-1" },
+                { name: "地-级联选择器", id: "land-sect-2" }
               ]
             }
           ]

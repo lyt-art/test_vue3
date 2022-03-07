@@ -32,6 +32,26 @@ const routes = [
         path: "/web-table",
         name: "WebTable",
         component: () => import("../views/cap/modules/WebTable")
+      },
+      {
+        path: "/land-sect-1",
+        name: "LandSect1",
+        component: () => import("../views/augur/szg/LandSect1")
+      },
+      {
+        path: "/gzmap-chart",
+        name: "GZMapChart",
+        component: () => import("../views/cap/modules/GZMapChart")
+      },
+      {
+        path: "/custom-swiper",
+        name: "CustomSwiper",
+        component: () => import("../views/cap/modules/CustomSwiper")
+      },
+      {
+        path: "/land-sect-2",
+        name: "LandSect2",
+        component: () => import("../views/augur/szg/LandSect2")
       }
     ]
   },
