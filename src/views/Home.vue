@@ -91,6 +91,13 @@ export default {
                 { name: "地-轮播图", id: "land-sect-1" },
                 { name: "地-级联选择器", id: "land-sect-2" }
               ]
+            },{
+              name: "city",
+              id: "city",
+              child: [
+                { name: "城市", id: "cityweb" },
+                
+              ]
             }
           ]
         }

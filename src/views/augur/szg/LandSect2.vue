@@ -198,7 +198,7 @@ export default {
   }
 
   .treeNode {
-    height: 675px;
+    height: 635px;
     margin: 0 20px;
     padding: 15px 5px;
     background: #020f2b;

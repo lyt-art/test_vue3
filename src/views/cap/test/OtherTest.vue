@@ -24,7 +24,15 @@
       <button @click="getMixin()">获取mixin中的值</button><br />
       <span>{{ mixin_res }}</span>
     </div>
-    <div class="box"></div>
+    <div class="box assign">
+      <div class="title">assign对象合并</div>
+      <div class="item">
+        {{ obj1 }}<br />
+        {{ obj2 }}<br />
+        {{ obj3 }}<br />
+      </div>
+      <div class="answer">{{ Object.assign(obj1, obj2, obj3) }}</div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -48,9 +56,12 @@ export default {
         { name: "Tom", age: 12 },
         { name: "Admin", age: 13 },
         { name: "Root", age: 16 },
-        { name: "Rose", age: 10 }
+        { name: "Rose", age: 10 },
       ],
-      mixin_res: ""
+      mixin_res: "",
+      obj1: { name: "cap" },
+      obj2: { sex: "女" },
+      obj3: { age: 23 },
     };
   },
   computed: {
@@ -58,10 +69,10 @@ export default {
     filterPersons() {
       const { searchName, persons, orderType } = this;
       // 过滤 indexOf检索（-1：没有检索到，0/1/2：检索到返回索引值）
-      let fPersons = persons.filter(p => p.name.indexOf(searchName) !== -1);
+      let fPersons = persons.filter((p) => p.name.indexOf(searchName) !== -1);
       // 排序
       if (orderType !== 0) {
-        fPersons.sort(function(p1, p2) {
+        fPersons.sort(function (p1, p2) {
           if (orderType === 2) {
             // 降序
             return p2.age - p1.age;
@@ -71,10 +82,10 @@ export default {
         });
       }
       return fPersons;
-    }
+    },
   },
   components: {
-    FatherChild
+    FatherChild,
   },
   methods: {
     // 列表过滤与排序
@@ -84,8 +95,8 @@ export default {
     // mixin使用
     getMixin() {
       this.mixin_res = this.getMsgMixin();
-    }
-  }
+    },
+  },
 };
 </script>
 

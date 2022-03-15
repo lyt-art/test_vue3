@@ -60,6 +60,11 @@ const routes = [
     path: "/csjcys",
     name: "Csjcys",
     component: () => import("../views/augur/szg/Csjcys")
+  },
+  {
+    path: "/cityweb",
+    name: "cityweb",
+    component: () => import("../views/augur/city/cityweb")
   }
 ];
 
