@@ -23,6 +23,9 @@ module.exports = {
         pathRewrite: {
           "^/axs": ""
         }
+      },
+      "/api": {
+        target: "http://39.98.123.211",
       }
     }
   }

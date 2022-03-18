@@ -52,6 +52,21 @@ const routes = [
         path: "/land-sect-2",
         name: "LandSect2",
         component: () => import("../views/augur/szg/LandSect2")
+      },
+      {
+        path: "/zoom",
+        name: "Zoom",
+        component: () => import("../views/cap/modules/Zoom")
+      },
+      {
+        path: "/register",
+        name: "Register",
+        component: () => import("../views/cap/modules/Register")
+      },
+      {
+        path: "/login",
+        name: "Login",
+        component: () => import("../views/cap/modules/Login")
       }
     ]
   },

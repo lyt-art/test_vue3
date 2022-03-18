@@ -64,20 +64,23 @@ export default {
               child: [
                 { name: "第三方插件测试", id: "plugin-test" },
                 { name: "vuex使用", id: "vuex-test" },
-                { name: "知识点", id: "other-test" }
-              ]
+                { name: "知识点", id: "other-test" },
+              ],
             },
             {
               name: "功能模块",
               id: "modules",
               child: [
+                { name: "登录", id: "login" },
+                { name: "注册", id: "register" },
+                { name: "图片放大镜", id: "zoom" },
                 { name: "树形表格", id: "tree-table" },
                 { name: "表格＋表单", id: "web-table" },
                 { name: "广州市地图echarts", id: "gzmap-chart" },
-                { name: "自定义轮播图", id: "custom-swiper" }
-              ]
-            }
-          ]
+                { name: "自定义轮播图", id: "custom-swiper" },
+              ],
+            },
+          ],
         },
         {
           name: "augur",
@@ -89,19 +92,17 @@ export default {
               child: [
                 { name: "城市基础要素", id: "csjcys" },
                 { name: "地-轮播图", id: "land-sect-1" },
-                { name: "地-级联选择器", id: "land-sect-2" }
-              ]
-            },{
+                { name: "地-级联选择器", id: "land-sect-2" },
+              ],
+            },
+            {
               name: "city",
               id: "city",
-              child: [
-                { name: "城市", id: "cityweb" },
-                
-              ]
-            }
-          ]
-        }
-      ]
+              child: [{ name: "城市", id: "cityweb" }],
+            },
+          ],
+        },
+      ],
     };
   },
   // watch: {
@@ -125,8 +126,8 @@ export default {
       this.routePath = `/${params}`;
       // console.log(this.routePath);
       this.$router.push({ path: this.routePath });
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,6 +1,7 @@
 const API = {
   baseUrl: {
-    menu: "menu"
+    menu: "menu",
+    api: "api"
   }
 };
 
