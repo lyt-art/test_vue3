@@ -33,7 +33,11 @@
       </div>
       <div class="answer">{{ Object.assign(obj1, obj2, obj3) }}</div>
     </div>
-    <div class="box"></div>
+    <div class="box">
+      <div class="title">地图市级数据</div>
+      <button @click="getMapData()">获取市级地区数据</button>
+      <div class="res">{{ map_res }}</div>
+    </div>
     <div class="box"></div>
     <div class="box"></div>
     <div class="box"></div>
@@ -45,6 +49,7 @@
 <script>
 import FatherChild from "../../../components/father-child/father.vue";
 import capMixin from "../../../mixins/index";
+import {convert} from "@/utils/mapData";
 export default {
   mixins: [capMixin],
   data() {
@@ -62,6 +67,7 @@ export default {
       obj1: { name: "cap" },
       obj2: { sex: "女" },
       obj3: { age: 23 },
+      map_res: "",
     };
   },
   computed: {
@@ -95,6 +101,11 @@ export default {
     // mixin使用
     getMixin() {
       this.mixin_res = this.getMsgMixin();
+    },
+    // 获取市级数据mapdata
+    getMapData() {
+      let name = "广州市";
+      this.map_res = convert(name);
     },
   },
 };

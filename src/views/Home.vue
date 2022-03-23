@@ -74,6 +74,7 @@ export default {
                 { name: "登录", id: "login" },
                 { name: "注册", id: "register" },
                 { name: "图片放大镜", id: "zoom" },
+                { name: "不规则表格", id: "irregular-table" },
                 { name: "树形表格", id: "tree-table" },
                 { name: "表格＋表单", id: "web-table" },
                 { name: "广州市地图echarts", id: "gzmap-chart" },

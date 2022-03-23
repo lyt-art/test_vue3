@@ -67,6 +67,11 @@ const routes = [
         path: "/login",
         name: "Login",
         component: () => import("../views/cap/modules/Login")
+      },
+      {
+        path: "/irregular-table",
+        name: "Irregular-table",
+        component: () => import("../views/cap/modules/IrregularTable")
       }
     ]
   },
