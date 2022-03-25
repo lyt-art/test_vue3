@@ -77,6 +77,7 @@ export default {
                 { name: "不规则表格", id: "irregular-table" },
                 { name: "树形表格", id: "tree-table" },
                 { name: "表格＋表单", id: "web-table" },
+                { name: "全国各地地图echart", id: "map-chart" },
                 { name: "广州市地图echarts", id: "gzmap-chart" },
                 { name: "自定义轮播图", id: "custom-swiper" },
               ],

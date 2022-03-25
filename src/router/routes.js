@@ -39,6 +39,11 @@ const routes = [
         component: () => import("../views/augur/szg/LandSect1")
       },
       {
+        path: "/map-chart",
+        name: "MapChart",
+        component: () => import("../views/cap/modules/MapChart")
+      },
+      {
         path: "/gzmap-chart",
         name: "GZMapChart",
         component: () => import("../views/cap/modules/GZMapChart")

@@ -40,11 +40,22 @@ export default {
     userLogin() {
       postLogin(this.ruleForm).then((res) => {
         // console.log(res, "cap======================");
-        if(res.status == 200 && res.data && res.data.dataCode == 200) {
-          
+        if (res.status == 200 && res.data && res.data.dataCode == 200) {
+          // 可能给你返回token值
+          this.$router.push("/home");
         }
       });
     },
+    // 尚硅谷
+    // async userLogin() {
+    //   try {
+    //     const { phone, password } = this;
+    //     phone && password && (await postLogin({ phone, password }));
+    //     this.$router.push("/home");
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // },
   },
 };
 </script>

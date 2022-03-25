@@ -46,7 +46,7 @@ export default {
   .pic {
     width: 405px;
     height: 270px;
-    background: url("D:/cap_study/test_vue3/src/assets/custom_swiper/1.jpg")
+    background: url("../../../assets/custom_swiper/1.jpg")
       no-repeat;
     background-size: 100% 100%;
   }
@@ -74,7 +74,7 @@ export default {
       left: 0;
       width: 200%;
       height: 200%;
-      background: url("D:/cap_study/test_vue3/src/assets/custom_swiper/1.jpg")
+      background: url("../../../assets/custom_swiper/1.jpg")
         no-repeat;
       background-size: 100% 100%;
     }
