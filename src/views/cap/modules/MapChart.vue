@@ -149,7 +149,8 @@ export default {
     },
     // 省级地图
     initProvinceMap() {
-      this.provinceEchart = echarts.init(this.$refs.provinceMap);
+      let that = this;
+      that.provinceEchart = echarts.init(that.$refs.provinceMap);
       let option = {
         tooltip: {
           show: false,
@@ -220,7 +221,18 @@ export default {
           },
         ],
       };
-      this.provinceEchart.setOption(option);
+      that.provinceEchart.setOption(option);
+      // 屏蔽鼠标移入事件
+      that.provinceEchart.on("mouseover", function (params) {
+        mapChart.dispatchAction({
+          type: "downplay",
+        });
+      });
+      // 添加地图区域点击事件
+      that.provinceEchart.off("click");
+      that.provinceEchart.on("click", function (params) {
+      });
+      window.onresize = that.provinceEchart.resize;
     },
   },
 };
