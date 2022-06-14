@@ -10,7 +10,7 @@ const capMixin = {
     }
   },
   created() {
-    alert("此页面使用了mixin");
+    // alert("此页面使用了mixin");
   }
 };
 

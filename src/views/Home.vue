@@ -80,6 +80,8 @@ export default {
                 { name: "全国各地地图echart", id: "map-chart" },
                 { name: "广州市地图echarts", id: "gzmap-chart" },
                 { name: "自定义轮播图", id: "custom-swiper" },
+                { name: "考核", id: "testLyt" },
+                { name: "vue-pdf", id: "vue-pdf" },
               ],
             },
           ],

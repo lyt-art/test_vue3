@@ -49,7 +49,7 @@
 <script>
 import FatherChild from "../../../components/father-child/father.vue";
 import capMixin from "../../../mixins/index";
-import {convert} from "@/utils/mapData";
+import { convert } from "@/utils/mapData";
 export default {
   mixins: [capMixin],
   data() {

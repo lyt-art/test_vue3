@@ -77,6 +77,11 @@ const routes = [
         path: "/irregular-table",
         name: "Irregular-table",
         component: () => import("../views/cap/modules/IrregularTable")
+      },
+      {
+        path: "/vue-pdf",
+        name: "vue-pdf",
+        component: () => import("../views/cap/modules/vue-pdf")
       }
     ]
   },
@@ -90,7 +95,12 @@ const routes = [
     path: "/cityweb",
     name: "cityweb",
     component: () => import("../views/augur/city/cityweb")
-  }
+  },
+  {
+    path: "/testLyt",
+    name: "Csjcys",
+    component: () => import("../views/augur/testLyt")
+  },
 ];
 
 export default routes;
